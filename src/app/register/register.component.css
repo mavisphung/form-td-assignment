@@ -1,0 +1,143 @@
+.container {
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  visibility: visible;
+}
+
+.title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  height: 3px;
+  width: 30px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--first-color), red);
+  position: absolute;
+}
+
+.register__data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.register__input {
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 15px;
+}
+
+.register__label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.register__data input,
+.register__data select {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 1px;
+  transition: all .1s ease;
+  font-size: var(--normal-font-size);
+}
+
+.register__data input:valid,
+.register__data input:focus {
+  border-color: var(--first-color);
+  border-bottom-width: 3px;
+}
+
+/* .register__data input:invalid {
+  border-color: red;
+} */
+
+.my-invalid {
+  color: red;
+  font-size: var(--smaller-font-size);
+}
+
+.register__data select {
+  color: #000;
+}
+
+/* .register__data select option:hover {
+  background-color: var(--first-color);
+} */
+
+.register__button input[type="submit"] {
+  padding: 5px 20px;
+  border: 1px solid var(--first-color);
+  border-radius: 5px;
+  background-color: var(--first-color);
+  color: white;
+  font-weight: var(--font-medium);
+}
+
+.register__modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-modal);
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.register__modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+.register__modal-title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
+}
+
+.register__modal-close {
+  font-size: var(--h2-font-size);
+  position: absolute;
+  top: 1.25rem;
+  right: 1rem;
+  cursor: pointer;
+
+}
+
+.register__modal-info {
+  margin: 0;
+  padding: 0;
+  row-gap: 1.5rem;
+}
+
+.register__modal-info li {
+  display: flex;
+}
+
+.register__modal-icon {
+  margin-right: 7px;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
